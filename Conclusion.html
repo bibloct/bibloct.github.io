@@ -194,6 +194,7 @@
             </div>
     <div class="prompt-options">
         <div class="prompt-option-correct" id="correct" data-aos="flip-left" data-aos-delay="2500"><b>Play again!</b></div>
+        <div class="prompt-option-wrong" data-aos="flip-left" data-aos-delay="2500">Explore more on the IMDA homepage!</div>
     </div>
     </div>
 <script type="text/javascript">
@@ -204,6 +205,16 @@
             location.href = "index.html";
         }, 4000); /* nts: redirect code */
     };
+    const wrongOptions = document.querySelectorAll(".prompt-option-wrong"); /* nts: can't use same id more than once, so this code uses class instead */
+    wrongOptions.forEach(function (option) {
+        option.onclick = function () {
+            var audio = new Audio('correct.wav');
+            audio.play();
+            setTimeout(function () {
+                windows.location.href = "https://www.imda.gov.sg/public-and-seniors";
+            }, 4000);
+        };
+    });
 </script>
 <script>
     AOS.init();
