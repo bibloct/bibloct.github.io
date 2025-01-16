@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Language of Generative AI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 960px;
+        height: 540px;
+        aspect-ratio: 16/9;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        justify-content: flex-end;
+        background-position: center; 
+        padding: 20px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      color: white;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .hero-text .cta-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background-color: #8a2be2; /* Purple */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-text .cta-button:hover {
+      background-color: #5a189a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero-text">
+      <h1>The Language of Generative AI</h1>
+      <p>You’re telling me I not only have to learn English and Mother Tongue... now I have to learn another language?</p>
+      <a href="#" class="cta-button">What language?</a>
+    </div>
+  </div>
+</body>
+</html>

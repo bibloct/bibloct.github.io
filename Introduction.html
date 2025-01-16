@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Titillium Web", sans-serif;
+        }
+        /*note to self: prompt style START*/
+        .speech-bubble-aiden-1 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .speech-bubble-aiden-2 {
+            position: absolute;
+            top:134px;
+            right: 10px;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .speech-bubble-aiden-3 {
+            position: absolute;
+            top: 240px;
+            right: 10px;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.15;
+            font-weight: regular;
+        }
+        @keyframes typewriter {
+            0% { width: 0% }
+            33% { width: 95% }
+            100% { width: 95% }
+        }
+        @keyframes blink {
+            0% { border-color: transparent; }
+            100% { border-color: black; }
+        }
+        h1 {
+            margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 1rem;
+            line-height: 1.15;
+            border-right: 3px solid black;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation: typewriter 3s steps(55, end) forwards, blink 667ms steps(55) infinite alternate;
+        }
+        /*nts: speech bubbble style END*/
+        /*nts: prompt style START*/
+        .prompt-options {
+            position: absolute;
+            bottom: 45px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            gap: 10px;
+        }
+        .prompt-option-correct {
+            text-align: center;
+            height: 24px;
+            width: 400px;
+            display: block;
+            margin: 0 auto; 
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #000;
+            border-radius: 8px;
+            gap: 30px;
+            justify-content: flex-end;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease;
+        }
+        .prompt-option-correct:hover {
+            background-color: rgba(160, 160, 160, 0.8);
+            color:#ffffff;
+        }
+        .prompt-option-correct:active,
+        .prompt-option-correct:focus {
+            background-color: rgb(0, 155, 54);
+            color:#ffffff;
+            outline: 3px solid yellow;
+            transform: scale(0.98);
+        }
+        .prompt-option-wrong {
+            text-align: center;
+            height: 180px;
+            width: 280px;
+            display: block;
+            margin: 0 auto; 
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #000;
+            border-radius: 8px;
+            gap: 30px;
+            justify-content: flex-end;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease;
+        }
+        .prompt-option-wrong:hover {
+            background-color: rgba(160, 160, 160, 0.8);
+            color:#ffffff
+        }
+        .prompt-option-wrong:active,
+        .prompt-option-wrong:focus {
+            background-color: rgb(155, 0, 0);
+            color:#ffffff;
+            outline: 3px solid yellow;
+            transform: scale(0.98);
+        }
+        /*nts: prompt style END*/
+        .persona {
+            color: rgb(113, 0, 89);
+            font-weight: bolder;
+        }
+        .context {
+            color: rgb(146, 58, 0);
+            font-weight: bolder;
+        }
+        .audience {
+            color: rgb(64, 87, 0);
+            font-weight: bolder;
+        }
+        .task {
+            color: rgb(0, 70, 155);
+            font-weight: bolder;
+        }
+        .format {
+            color: rgb(0, 188, 144);
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <span id="dummy"></span>
+    <div class="container">
+        <div class="speech-bubble-aiden-1" data-aos="fade-left" data-aos-delay="200">
+            <p>Hi, my name is Aiden and I've just graduated from secondary school. Over the holidays, I set out to learn a few new recipes to cook for family dinners.
+            </p>
+        </div>
+        <div class="speech-bubble-aiden-2" data-aos="fade-left" data-aos-delay="1200">
+            <p>It's not going too well, to be honest... I'd been having trouble deciding what cuisines I should experiment cooking.</p>
+        </div>
+        <div class="speech-bubble-aiden-3" data-aos="fade-left" data-aos-delay="2200">
+            <p>My cooking buddy told me that he typically uses Generative AI to ideate what he should experiment with, but the holidays are almost over...</p>
+        </div>
+    <div class="prompt-options">
+        <div class="prompt-option-correct" id="correct" data-aos="flip-left" data-aos-delay="3000"><b>Maybe there's another way I could learn?</b></div>
+    </div>
+    </div>
+<script type="text/javascript">
+    document.getElementById("correct").onclick = function() {
+        setTimeout(function() {
+            location.href = "Q1_iframe.html";
+        }); /* nts: redirect code */
+    };
+</script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
